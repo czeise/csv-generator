@@ -14,7 +14,7 @@ CSV.open(@data_path, "wb") do |csv|
   10.times do
     csv << [Faker::Name.first_name.upcase, Faker::Name.last_name.upcase,
             Faker::Address.street_address, Faker::Address.city,
-            Faker::Address.state_abbr, Faker::Address.zip_code,
+            Faker::Address.state_abbr, Faker::Address.zip_code[0..4],
             Faker::Number.between(20, 89), %w(M F).sample,
             %w(W B H I A).sample, 'prospect', '', '']
   end
