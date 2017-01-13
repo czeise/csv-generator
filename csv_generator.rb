@@ -16,6 +16,6 @@ CSV.open(@data_path, "wb") do |csv|
             Faker::Address.street_address, Faker::Address.city,
             Faker::Address.state_abbr, Faker::Address.zip_code,
             Faker::Number.between(20, 89), %w(M F).sample,
-            %w(W B H I A).sample, 'prospect']
+            %w(W B H I A).sample, 'prospect', '', '']
   end
 end
